@@ -14,34 +14,80 @@ Notice that the order of the output and the order of the triplets does not matte
 '''
 # Bruteforce
 
-def threeSum(nums: list, target: int):
-    final_Output: list = []
-    length: int = len(nums)
-    i: int = 0 
-    j: int = i+1
-    k: int = length - 1
-    while (i <= length - 2 and j <= length-1 and k <= length):
-        
-        if nums[i] + nums[j] + nums[k] == target:
-            final_Output.append([nums[i] , nums[j] , nums[k]])
-            if k == length - 1 and j == k-1 and i == j - 1:
-                break
-            if k == j:
-                i += 1
-                j = i + 1
-                k = length - 1
-            else:
-                k -= 1
-        elif nums[i] + nums[j] + nums[k] != target:
-            if k == length - 1 and j == k-1 and i == j - 1:
-                break
-            if k == j:
-                i += 1
-                j = i + 1
-                k = length - 1
-            else:
-                k -= 1
-    return final_Output
+# def threeSum(nums: list, target: int):
+#     final_Output = []
+#     for i in range(len(nums)):
+#         for j in range(i+1, len(nums)):
+#             for k in range(j+1, len(nums)):
+#                     if nums[i] + nums[j]+ nums[k] == target:
+#                         final_Output.append([nums[i] , nums[j] , nums[k]])
+#     return final_Output
 
-nums = [1,2,3,4,5,6,7,8,9]
+
+# Better
+# def threeSum(nums: list, target: int):
+#     final_Output: list = []
+#     length: int = len(nums)
+#     i: int = 0 
+#     j: int = i+1
+#     k: int = length - 1
+#     while (i <= length - 2 and j <= length-1 and k <= length):
+#         if nums[i] + nums[j] + nums[k] == target:
+#             final_Output.append([nums[i] , nums[j] , nums[k]])
+#             if k == length - 1 and j == k-1 and i == j - 1:
+#                 break
+#             if k == j:
+#                 i += 1
+#                 j = i + 1
+#                 k = length - 1
+#             else:
+#                 k -= 1
+#         elif nums[i] + nums[j] + nums[k] != target:
+#             if k == length - 1 and j == k-1 and i == j - 1:
+#                 break
+#             if k == j:
+#                 i += 1
+#                 j = i + 1
+#                 k = length - 1
+#             else:
+#                 k -= 1
+#     return final_Output
+
+# Optimal Solution
+def threeSum(nums: list, target: int):
+    nums.sort()
+    n = len(nums)
+    Output = []
+
+    for i in range(n-2):
+        if (i > 0) and nums[i] == nums[i-1]:
+            continue
+
+        left = i + 1
+        right = n - 1
+
+        while left < right:
+            current_sum = nums[left] + nums[right] + nums[i]
+
+            if current_sum == target:
+                Output.append([nums[i], nums[left], nums[right]])
+
+                while left < right and nums[left] == nums[left + 1]:
+                    left += 1
+
+                while right > left and nums[right] == nums[right - 1]:
+                    right -= 1
+
+                left += 1
+                right -=1
+
+            elif current_sum < target:
+                left +=1
+            else:
+                right -= 1
+    return Output
+
+
+
+nums = [1,2,3,5,4,6,7,8,9]
 print(threeSum(nums, 20))

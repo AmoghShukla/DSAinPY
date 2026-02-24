@@ -28,34 +28,54 @@ def Four_Sum(nums, target):
 
 # Better
 
-def Four_Sum(nums: list[int], target: int) -> list[int]:
-    Output = []
+# def Four_Sum(nums: list[int], target: int) -> list[int]:
+#     Output = []
     
-    for i in range(len(nums) - 4):
-        for j in range(i+1, len(nums) - 3):
-            left = j+1
-            right = len(nums) - 1
-            while left < right:
-                if nums[i] + nums[j] + nums[left] + nums[right] == target:
-                    Output.append([i, j, left, right])
-                    Output.append([nums[i] , nums[j] , nums[left] , nums[right]])
-                elif left == right - 1:
-                    break
+#     for i in range(len(nums) - 4):
+#         for j in range(i+1, len(nums) - 3):
+#             left = j+1
+#             right = len(nums) - 1
+#             while left < right:
+#                 if nums[i] + nums[j] + nums[left] + nums[right] == target:
+#                     Output.append([nums[i] , nums[j] , nums[left] , nums[right]])
+#                 elif left == right - 1:
+#                     break
+#                 left += 1
+#     return Output
+
+
+# Optimal
+
+def FourSum(nums: list[int], target: int) -> list[int]:
+    nums.sort()
+    n = len(nums)
+    result = []
+
+    for i in range(n - 3):
+        if i > 0 and  nums[i] == nums[i-1]:
+            continue
+
+        for j in range(i + 1, n - 2):
+            if j > i + 1 and nums[j] == nums[j-1]:
+                continue
+
+            left = j + 1
+            right = n - 1
+
+            while left < right :
+                sum = nums[i] + nums[j] + nums[left] + nums[right]
+                if sum == target:
+                    result.append(nums[i] , nums[j] , nums[left] , nums[right])
+                
+                while left <  right and nums[left] == nums[left + 1]:
+                    continue
+
+                while right > left and nums[right] == nums[right - 1]:
+                    continue
+
                 left += 1
-    return Output
-
-# def Four_Sum(nums, target):
-#     left_first: int = 0
-#     right_first: int = right_second - 1
-#     left_second: int = left_first + 1
-#     right_second: int = len(nums) - 1
-
-#     while left_second < right_first:
-#         if nums[left_first] + nums[left_second] + nums[right_first] + nums[right_second] == target:
-#             return [nums[left_first] , nums[left_second] , nums[right_first] , nums[right_second]]
-#         else:
-#             left_second += 1
-
+                right -=1
+    return result
 
 
 

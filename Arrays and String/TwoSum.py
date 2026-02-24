@@ -16,17 +16,25 @@ nums = [1, 3, 2, 2, 4]
 target = 4
 
 '''
+# # Bruteforce
+# def twosum(nums: list, target: int):
+#     differenc = []
+#     for i in range(len(nums)):
+#         remaining = target - nums[i]
+#         if nums[i] in differenc:
+#             index = differenc.index(nums[i])
+#             return (nums[i], nums[index])
+#         else:
+#             differenc.append(remaining)
+
 
 def twosum(nums: list, target: int):
-    differenc = []
-    for i in range(len(nums)):
-        remaining = target - nums[i]
-        if nums[i] in differenc:
-            index = differenc.index(nums[i])
-            return (nums[i], nums[index])
-        else:
-            differenc.append(remaining)
-            
+    seen = {}
+    for index, values in enumerate(nums):
+        difference = target - values
+        if difference in seen:
+            return (seen[difference], values)
+        seen[values] = index        
 
 nums = [1, 3, 2, 2, 4]
 target = 4

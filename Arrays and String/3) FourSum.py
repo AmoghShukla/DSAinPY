@@ -26,7 +26,23 @@ def Four_Sum(nums, target):
     return Output
                     
 
+# Better
 
+def Four_Sum(nums: list[int], target: int) -> list[int]:
+    Output = []
+    
+    for i in range(len(nums) - 4):
+        for j in range(i+1, len(nums) - 3):
+            left = j+1
+            right = len(nums) - 1
+            while left < right:
+                if nums[i] + nums[j] + nums[left] + nums[right] == target:
+                    Output.append([i, j, left, right])
+                    Output.append([nums[i] , nums[j] , nums[left] , nums[right]])
+                elif left == right - 1:
+                    break
+                left += 1
+    return Output
 
 # def Four_Sum(nums, target):
 #     left_first: int = 0
@@ -43,6 +59,6 @@ def Four_Sum(nums, target):
 
 
 
-nums = [7, -3, 2, 9, 1, -6, 4, 8, -2, 5, 3, -1, 6, 0]
-target = 10
+nums = [7, -3, 2, 9, 1, -6, 4, 8, -2, 5, 3, -1, 6, 0 , 5, 5, 5, 5]
+target = 20
 print(Four_Sum(nums, target))

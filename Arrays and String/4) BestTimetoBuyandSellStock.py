@@ -13,12 +13,12 @@ Note that buying on day 2 and selling on day 1 is not allowed because you must b
 '''
 
 # Bruteforce
-import copy
+
 def StockBuyAndSell(prices: list[int]) -> int:
     mini = prices[0]
     n = len(prices)
     max_profit = 0
-    for i in range(n-1):
+    for i in range(n):
         cost = prices[i] - mini
         max_profit = max(max_profit, cost)
         mini = min(mini, prices[i])

@@ -24,5 +24,20 @@ def StockBuyAndSell(prices: list[int]) -> int:
         mini = min(mini, prices[i])
     return max_profit
 
+# Better
+
+def StockBuyAndSell(prices: list[int]) -> int:
+    if not prices:
+        return 0
+    
+    mini = prices[0]
+    max_profit = 0
+
+    for price in prices:
+        cost = price - mini
+        max_profit = max(max_profit, cost)
+        mini = min(mini, price)
+    return max_profit
+
 prices = [7,1,5,3,6,4]
 print(StockBuyAndSell(prices))

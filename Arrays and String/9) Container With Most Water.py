@@ -6,6 +6,8 @@ There are n vertical lines drawn such that the two endpoints of the ith line are
 Find two lines that together with the x-axis form a container, such that the container contains the most water.
 Return the maximum amount of water a container can store.
 
+Formula : (right - left) * min(list[right], list[left])
+
 Level : Medium
 
 Example:

@@ -36,3 +36,7 @@ def trap(height: list[int]) -> int:
                 water += Right_max - height[right]
             right -= 1
     return water
+
+
+height = [0,1,0,2,1,0,1,3,2,1,2,1]
+print(trap(height))

@@ -6,6 +6,8 @@ In one operation, you must choose exactly k different indices and flip each '0' 
 Return the minimum number of operations required to make all characters in the string equal to '1'. If it is not possible, return -1.
 
 
+Level : Hard
+
 Input: s = "110", k = 1
 
 Output: 1
@@ -18,6 +20,8 @@ Since k = 1, we can flip it directly in one operation.
 
 '''
 
+import collections
+from sortedcontainers import SortedSet
 
 class Solution:
     def minOperations(self, s: str, k: int) -> int:

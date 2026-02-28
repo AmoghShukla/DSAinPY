@@ -4,6 +4,8 @@ If the current number is even, you have to divide it by 2.
 If the current number is odd, you have to add 1 to it.
 It is guaranteed that you can always reach one for all test cases.
 
+Level : Medium
+
 Input: s = "1101"
 Output: 6
 Explanation: "1101" corressponds to number 13 in their decimal representation.

@@ -36,3 +36,7 @@ def merge(intervals: list[list[int]]) -> list[list[int]]:
             pass
         pointer += 1
     return Result
+
+
+intervals = [[4,7],[1,4]]
+print(merge(intervals))

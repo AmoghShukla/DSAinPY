@@ -11,6 +11,18 @@ def search(nums: list[int], target: int) -> int:
     high = len(nums) - 1
     while(low <= high):
         mid = (low + high)//2
+
+        # changed this : 
+
+        # if nums[high] == target:
+        #     return high
+        # if nums[low] == target:
+        #     return low
+        # if nums[mid] == target:
+        #     return mid
+
+        # to this
+        
         for i in [mid, low, high]:
             if nums[i] == target:
                 return i

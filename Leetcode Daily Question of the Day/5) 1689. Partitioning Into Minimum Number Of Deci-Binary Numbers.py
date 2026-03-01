@@ -16,3 +16,9 @@ def minPartitions(n : str):
 
 n = "694837272940"
 print(minPartitions(n))
+
+
+'''
+Explanation : We Returned max(n) because essentially, the maximum number of Deci-Binary numbers which add up to that integer is 
+equal to the highest number in the string
+'''

@@ -4,7 +4,11 @@ A grid is said to be valid if all the cells above the main diagonal are zeros.
 Return the minimum number of steps needed to make the grid valid, or -1 if the grid cannot be valid.
 The main diagonal of a grid is the diagonal that starts at cell (1, 1) and ends at cell (n, n).
 
+level : Medium
 
+Example : 
+Input: grid = [[0,0,1],[1,1,0],[1,0,0]]
+Output: 3
 '''
 
 def minSwaps(self, grid: list[list[int]]) -> int:

@@ -16,4 +16,5 @@ def minSwaps(self, grid: list[list[int]]) -> int:
     length = len(grid)
 
 
-    
+grid = [[0,0,1],[1,1,0],[1,0,0]]
+print(minSwaps(grid))

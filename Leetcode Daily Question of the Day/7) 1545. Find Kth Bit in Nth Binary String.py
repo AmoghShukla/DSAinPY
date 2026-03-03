@@ -23,4 +23,6 @@ def findKthBit(n: int, k: int) -> str:
     for i in range(1, n):
         inverted = ''.join("1" if c == "0" else "0" for c in bit)
         bit = bit + "1" + inverted[::-1]
-    return bit
+    return bit[k-1]
+
+print(findKthBit(3, 1))

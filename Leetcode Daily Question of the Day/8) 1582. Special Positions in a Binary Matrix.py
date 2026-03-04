@@ -25,3 +25,27 @@ def numSpecial(mat: list[list[int]]) -> int:
             if sum(row1) == 1 and sum(column) == 1:
                 Special.append([i, j])
     return len(Special)
+
+# Optimized approach
+
+def numSpecial(mat: list[list[int]]) -> int:
+    
+    row: int = len(mat)
+    col: int = len(mat[0])
+    count = 0
+
+    row_count = [0] * row
+    col_count = [0] * col
+
+    for i in range(row):
+        for j in range(col):
+            if mat[i][j] == 1:
+                row_count[i] += 1
+                col_count[j] += 1
+
+    for i in range(row):
+        for j in range(col):
+            if mat[i][j] == 1 and row_count[i] == 1 and col_count[j] == 1:
+                count += 1
+        
+    return count

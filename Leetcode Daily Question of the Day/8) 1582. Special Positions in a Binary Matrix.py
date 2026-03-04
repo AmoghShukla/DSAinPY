@@ -49,3 +49,6 @@ def numSpecial(mat: list[list[int]]) -> int:
                 count += 1
         
     return count
+
+mat = [[1,0,0],[0,0,1],[1,0,0]]
+print(numSpecial(mat))

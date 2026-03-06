@@ -27,3 +27,6 @@ def hasCycle(head : ListNode) -> bool:
         seen.add(current)
         current = current.next
     return True
+
+head  = [3, 2, 0, -4]
+print(hasCycle(head))

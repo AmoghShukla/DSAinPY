@@ -22,3 +22,5 @@ def checkOnesSegment(s: str) -> bool:
             seen_zero = True
     return True
 
+s = '1110111'
+print(checkOnesSegment(s))

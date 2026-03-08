@@ -28,3 +28,6 @@ def SetMismatch(nums: list) -> list:
     missing = expected_sum - (actual_sum - duplicate)
 
     return [duplicate, missing]
+
+nums = [1,2,2,4]
+print(SetMismatch(nums))

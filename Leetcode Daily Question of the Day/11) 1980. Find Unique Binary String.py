@@ -21,3 +21,6 @@ def findDifferentBinaryString(nums: list[str]) -> str:
         binary_value = bin(i)[2:].zfill(length)
         if str(binary_value) not in nums:
             return str(binary_value)
+
+nums = ["01","10"]
+print(findDifferentBinaryString(nums))

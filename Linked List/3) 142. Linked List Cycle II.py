@@ -14,6 +14,7 @@ Output: tail connects to node index 1
 Explanation: There is a cycle in the linked list, where tail connects to the second node.
 '''
 
+# Bruteforce approach
 
 def detectCycle(head : list):
     current = head
@@ -27,6 +28,31 @@ def detectCycle(head : list):
             return current
         else:
             return -1
+        
+# Optimal Solution : Floyd's Tortoise and Hare Algorithm
+
+def detectCycle(head : list):
+
+    if not head:
+        return None
+    
+    slow = head
+    fast = head
+
+    while fast and fast.next:
+        slow = slow.next  
+        fast = fast.next.next
+
+        if slow == fast:
+            break
+    else:
+        return None
+    
+    slow  = head
+    while slow != fast:
+        slow = slow.next
+        fast = fast.next
+    return slow
 
 head = [3,2,0,-4]
 print(detectCycle(head))

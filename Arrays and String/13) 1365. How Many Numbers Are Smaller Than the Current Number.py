@@ -18,3 +18,12 @@ For nums[4]=3 there exist three smaller numbers than it (1, 2 and 2).
 
 
 '''
+
+def smallerNumbersThanCurrent(self, nums: list[int]) -> list[int]:
+    New_nums = list(nums)
+    New_nums.sort()
+    Output : list = []
+    for i in nums:
+        index = New_nums.index(i)
+        Output.append(index)
+    return Output

@@ -30,4 +30,3 @@ def detectCycle(head : list):
 
 head = [3,2,0,-4]
 print(detectCycle(head))
-

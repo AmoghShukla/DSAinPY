@@ -25,3 +25,6 @@ def findDissappearedNums(nums: list) -> list:
         if nums[i] > 0:
             Missing.append(i+1)
     return Missing
+
+nums = [4,3,2,7,8,2,3,1]
+print(findDissappearedNums(nums))

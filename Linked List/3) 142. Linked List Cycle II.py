@@ -28,4 +28,6 @@ def detectCycle(head : list):
         else:
             return -1
 
+head = [3,2,0,-4]
+print(detectCycle(head))
 

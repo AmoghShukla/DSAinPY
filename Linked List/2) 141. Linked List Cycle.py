@@ -15,7 +15,7 @@ Output: true
 Explanation: There is a cycle in the linked list, where tail connects to the second node.
 '''
 
-def hasCycle(head : ListNode) -> bool:
+def hasCycle(head : list) -> bool:
     if not head:
         return False
     current = head

@@ -27,3 +27,6 @@ def smallerNumbersThanCurrent(self, nums: list[int]) -> list[int]:
         index = New_nums.index(i)
         Output.append(index)
     return Output
+
+nums = [8,1,2,2,3]
+print(smallerNumbersThanCurrent(nums))

@@ -43,3 +43,8 @@ def MergeLists(List1 , List2):
         current.next = current2
 
     return dummy.next
+
+l1 = [1,2,4]
+l2 = [1,3,4]
+
+print(MergeLists(l1, l2))

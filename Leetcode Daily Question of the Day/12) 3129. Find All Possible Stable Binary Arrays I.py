@@ -16,7 +16,7 @@ Explanation: The possible binary arrays are [0,0,1], [0,1,0], and [1,0,0]. Note 
 
 from functools import lru_cache
 
-def numberOfStableArrays(self, zero: int, one: int, limit: int) -> int:
+def numberOfStableArrays(zero: int, one: int, limit: int) -> int:
     MOD = 10**9 + 7
 
     @lru_cache(None)
@@ -37,3 +37,6 @@ def numberOfStableArrays(self, zero: int, one: int, limit: int) -> int:
         return res % MOD
 
     return solve(zero, one, -1)
+
+zero = 2, one = 1, limit = 2
+print(numberOfStableArrays(zero, one, limit))

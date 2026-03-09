@@ -11,7 +11,6 @@ Explanation: The numbers 5 and 6 do not appear in the array.
 
 '''
 
-
 def findDissappearedNums(nums: list) -> list:
     Missing : list = []
     length : int  = len(nums)

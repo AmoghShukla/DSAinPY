@@ -28,4 +28,10 @@ class Solution:
         slow.next = slow.next.next
 
         return dummy.next
-    
+
+head = [1,2,3,4,5] 
+n = 2
+
+solution = Solution()
+result = solution.removeNthFromEnd(head, n)
+print(result)

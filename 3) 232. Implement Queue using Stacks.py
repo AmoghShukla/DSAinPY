@@ -12,3 +12,24 @@ Input : ["MyQueue","push","push","peek","pop","empty"]
 
 Output : [null,null,null,1,1,false]
 '''
+
+class Queue:
+
+    def __init__(self):
+        self.Queue = []
+    
+    def push(self, x: int) -> None:
+        self.Queue.append(x)
+    
+    def pop(self) -> int:
+        return self.Queue.pop(0)
+    
+    def peek(self) -> int:
+        return self.Queue[0]
+        
+
+    def empty(self) -> bool:
+        if not self.Queue:
+            return True
+        else:
+            return False

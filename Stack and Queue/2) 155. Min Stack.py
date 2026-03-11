@@ -19,3 +19,30 @@ Input : ["MinStack","push","push","push","getMin","pop","top","getMin"]
 Output : [null,null,null,null,-3,null,0,-2]
 
 '''
+
+class MinStack:
+
+    def __init__(self : MinStack) -> None:
+        self.stack = []
+        self.min_stack = []
+    
+    def push(self : MinStack, val : int) -> None:
+        self.stack.append(val)
+        if not self.min_stack or val <= self.min_stack[-1]:
+            self.min_stack.append(val)
+        
+    def pop(self : MinStack) -> None:
+        if self.stack:
+            top = self.stack.pop()
+            if top == self.min_stack[-1]:
+                self.min_stack.pop()
+    
+    def top(self : MinStack) -> int:
+        if self.stack:
+            return self.stack[-1]
+        return None
+    
+    def getMin(self : MinStack) -> int:
+        if self.min_stack:
+            return self.min_stack[-1]
+        return None

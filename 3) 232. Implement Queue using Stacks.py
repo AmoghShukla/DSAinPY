@@ -33,3 +33,11 @@ class Queue:
             return True
         else:
             return False
+
+queue = Queue()
+
+queue.push(21)
+queue.push(22)
+print(queue.peek())  
+print(queue.pop())  
+print(queue.empty())

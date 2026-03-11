@@ -21,3 +21,6 @@ def bitwiseComplement(self, n: int) -> int:
         else:
             complement += '1'
     return int(complement, 2)
+
+n = 12
+print(bitwiseComplement(n))

@@ -46,3 +46,10 @@ class MinStack:
         if self.min_stack:
             return self.min_stack[-1]
         return None
+    
+min_stack = MinStack()
+min_stack.push(-2)
+min_stack.push(0)
+min_stack.push(-3)
+print(min_stack.getMin())  # Returns -3
+min_stack.pop()

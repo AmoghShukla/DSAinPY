@@ -11,3 +11,22 @@ Example 1:
 Input: s = "()"
 Output: true
 '''
+
+class Solution:
+    def isValid(self, s: str) -> bool:
+        dictionary = {
+            ')': '(',
+            ']': '[',
+            '}': '{'
+        }
+
+        stack = []
+        
+        for char in s:
+            if char in dictionary:
+                top = stack.pop() if stack else '#'
+                if dictionary[char] != top:
+                    return False
+            else:
+                stack.append(char)
+        return not stack

@@ -31,3 +31,10 @@ class MyStack:
             return True
         else:
             return False
+
+stack = MyStack()
+stack.push(1)
+stack.push(2)
+print(stack.top())
+print(stack.pop())
+print(stack.empty())

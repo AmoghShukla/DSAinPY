@@ -9,3 +9,6 @@ def dailyTemperatures(temperatures):
             result[prev_index] = i - prev_index
         stack.append(i)
     return result
+
+temperatures = [73, 74, 75, 71, 69, 72, 76, 73]
+print(dailyTemperatures(temperatures))

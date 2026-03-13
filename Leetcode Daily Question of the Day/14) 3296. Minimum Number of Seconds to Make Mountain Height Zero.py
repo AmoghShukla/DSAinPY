@@ -1,3 +1,22 @@
+'''
+Question : 3296
+Title : Minimum Number of Seconds to Make Mountain Height Zero
+Difficulty : Medium
+You are given an integer mountainHeight and a 0-indexed integer array workerTimes, where workerTimes[i] is the time taken by the ith worker to reduce the mountain height by 1.
+In one second, you can assign any number of workers to work on the mountain simultaneously. A worker can only be assigned to work on the mountain once per second. The height of the mountain is reduced by the number of workers assigned to work on it in that second.
+Return the minimum number of seconds needed to reduce the mountain height to 0.
+
+Example 1:
+Input: mountainHeight = 3, workerTimes = [1,2,3]
+Output: 2
+Explanation:
+- In the first second, we can assign all three workers to work on the mountain. The height of the mountain is reduced by 3 (1 + 2 + 3) and becomes 0.
+Thus, the minimum number of seconds needed to reduce the mountain height to 0 is 1.
+
+
+'''
+
+
 class Solution:
     def minNumberOfSeconds(self, mountainHeight: int, workerTimes: List[int]) -> int:
 

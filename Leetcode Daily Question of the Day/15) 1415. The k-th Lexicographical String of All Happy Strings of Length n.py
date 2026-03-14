@@ -11,3 +11,7 @@ def getHappyString(n: int, k : int) -> str:
         
     backtrack('')
     return res[k-1] if k <= len(res) else ""
+
+n = 3
+k = 9
+print(getHappyString(n, k))

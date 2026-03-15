@@ -44,6 +44,11 @@ class Fancy:
         self.add = self.add * m
         self.mul = self.mul * m
     
+    def getIndex(self, idx: int) -> int:
+        if idx >= len(self.list):
+            return -1
+        return (self.list[idx] * self.mul + self.add) % self.mod
+    
 
 
     

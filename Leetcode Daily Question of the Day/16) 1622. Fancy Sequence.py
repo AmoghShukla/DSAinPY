@@ -40,6 +40,10 @@ class Fancy:
     def addAll(self, inc: int) -> None:
         self.add = (self.add + inc) % self.mod
     
+    def multAll(self, m: int) -> None:
+        self.add = self.add * m
+        self.mul = self.mul * m
     
+
 
     

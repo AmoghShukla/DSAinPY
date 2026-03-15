@@ -18,7 +18,7 @@ Thus, the minimum number of seconds needed to reduce the mountain height to 0 is
 
 
 class Solution:
-    def minNumberOfSeconds(self, mountainHeight: int, workerTimes: List[int]) -> int:
+    def minNumberOfSeconds(self, mountainHeight: int, workerTimes: list[int]) -> int:
 
         def can_finish(T):
             total = 0

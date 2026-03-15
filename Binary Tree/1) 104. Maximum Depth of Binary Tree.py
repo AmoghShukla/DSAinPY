@@ -20,5 +20,5 @@ def MaxDepth(root) -> int:
 
     return max(left, right) + 1
 
-root = [3,9,20,null,null,15,7]
+root = [3,9,20,None,None,15,7]
 print(MaxDepth(root))

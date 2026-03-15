@@ -22,3 +22,24 @@ Output
 [null, null, null, null, null, 10, null, null, null, 50, 80, 140]
 
 '''
+
+
+class Fancy:
+
+    def __inti__(self):
+        self.mod = 10**9 + 7
+        self.arr = []
+        self.add = 0
+        self.mul = 1
+
+    def append(self, val: int) -> None:
+        val = (val - self.add) % self.mod
+        val = (val * pow(self.mul, -1, self.mod)) % self.mod
+        self.arr.append(val)
+
+    def addAll(self, inc: int) -> None:
+        self.add = (self.add + inc) % self.mod
+    
+    
+
+    

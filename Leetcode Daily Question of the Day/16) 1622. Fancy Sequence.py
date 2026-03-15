@@ -50,5 +50,14 @@ class Fancy:
         return (self.list[idx] * self.mul + self.add) % self.mod
     
 
-
+fancy = Fancy()
+fancy.append(2)
+fancy.addAll(3)
+fancy.append(7)
+fancy.multAll(2)
+print(fancy.getIndex(0))
+fancy.addAll(3)
+fancy.append(10)
+fancy.multAll(2)
+print(fancy.getIndex(0))
     

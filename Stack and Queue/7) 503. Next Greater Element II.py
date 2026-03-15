@@ -23,3 +23,6 @@ def nextGreaterElements(nums):
             Stack.append(i)
     
     return Result
+
+nums = [5,4,3,2,1]
+print(nextGreaterElements(nums))

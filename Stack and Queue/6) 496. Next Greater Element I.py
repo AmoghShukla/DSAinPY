@@ -27,6 +27,17 @@ Output: [-1,3,-1]
 # Optimal : Using Stack and Hashmap
 def nextGreaterElement(nums1, nums2):
     Stack = []
+    Hash = {}
+
+    for num in nums2:
+        while Stack and num > Stack[-1]:
+            Hash[Stack.pop()] = num
+        Stack.append(num)
+
+    while Stack:
+        Hash[Stack.pop()] = -1
+
+    return [Hash[num] for num in nums1] 
 
             
 

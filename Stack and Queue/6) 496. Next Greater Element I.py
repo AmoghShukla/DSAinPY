@@ -12,17 +12,22 @@ Input: nums1 = [4,1,2], nums2 = [1,3,4,2]
 Output: [-1,3,-1]
 '''
 # Bruteforce 
+# def nextGreaterElement(nums1, nums2):
+        # Output = []
+        # for i in nums1:
+        #     ind = nums2.index(i) + 1
+        #     for j in nums2[ind:]:
+        #         if j > i:
+        #             Output.append(j)
+        #             break
+        #     else:
+        #         Output.append(-1)
+        # return Output
+
+# Optimal : Using Stack and Hashmap
 def nextGreaterElement(nums1, nums2):
-        Stack = nums1[:]
-        Pointer1 = nums1[0]
-        result = [-1] * len(nums1)
-        for i in range(len(nums2)):
-            if nums2[i] > Stack.top():
-                  result[i] = nums2[i]
-                  Stack.pop()
-                  break
-        else:
-              result[i]
+    Stack = []
+
             
 
 nums1 = [4, 1, 2]

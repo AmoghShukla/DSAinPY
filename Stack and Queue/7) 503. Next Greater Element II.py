@@ -10,3 +10,16 @@ Output: [2,-1,2]
 
 '''
 
+def nextGreaterElements(nums):
+    n = len(nums)
+    Stack = []
+    Result = [-1] * n
+    
+    for i in range(2 * n):
+        while Stack and nums[i % n] > nums[Stack[-1]]:
+            Result[Stack.pop()] = nums[i % n]
+    
+        if i < n:
+            Stack.append(i)
+    
+    return Result

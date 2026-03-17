@@ -28,3 +28,7 @@ class Solution:
                 max_area = max(max_area, row[j] * (j + 1))
         
         return max_area
+    
+
+matrix = [[0,0,1],[1,1,1],[1,0,1]]
+print(Solution().largestSubmatrix(matrix))

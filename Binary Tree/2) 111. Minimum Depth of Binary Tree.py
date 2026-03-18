@@ -23,3 +23,6 @@ def minDepth(self, root) -> int:
             left = self.minDepth(root.left)
             right = self.minDepth(root.right)
         return min(left, right) + 1
+
+root = [3,9,20,None,None,15,7]
+print(minDepth(root))

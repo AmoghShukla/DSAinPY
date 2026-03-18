@@ -21,3 +21,6 @@ def invertTree(self, root):
     self.left, self.right = right, left
 
     return root
+
+root = [4,2,7,1,3,6,9]
+print(invertTree(root))

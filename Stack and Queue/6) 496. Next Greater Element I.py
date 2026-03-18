@@ -25,13 +25,11 @@ Output: [-1,3,-1]
         # return Output
 
 # Optimal : Using Stack and Hashmap
-def nextGreaterElement(nums):
+def nextGreaterElement(nums1, nums2):
     Stack = []
     Hash = {}
 
-    for num in nums:
-        if num in Hash:
-            continue
+    for num in nums2:
         while Stack and num > Stack[-1]:
             Hash[Stack.pop()] = num
         Stack.append(num)
@@ -39,11 +37,11 @@ def nextGreaterElement(nums):
     while Stack:
         Hash[Stack.pop()] = -1
 
-    return [Hash[num] for num in nums] 
+    return [Hash[num] for num in nums1] 
 
             
-nums = [5,4,3,2,1]
-# nums1 = [4, 1, 2]
-# nums2 = [1, 3, 4, 2]
 
-print(nextGreaterElement(nums))
+nums1 = [4, 1, 2]
+nums2 = [1, 3, 4, 2]
+
+print(nextGreaterElement(nums1, nums2))

@@ -27,3 +27,7 @@ def isSameTree(self, p, q) -> bool:
         self.isSameTree(p.left, q.left) and 
         self.isSameTree(p.right, q.right)
     )
+
+p = [1,2,3]
+q = [1,2,3]
+print(isSameTree(p, q))

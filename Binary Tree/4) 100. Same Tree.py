@@ -12,7 +12,7 @@ Output: true
 
 '''
 
-def isSameTree(self, p, q) -> bool:
+def isSameTree(p, q) -> bool:
 
     if not p and not q:
         return True

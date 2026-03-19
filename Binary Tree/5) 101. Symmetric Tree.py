@@ -8,7 +8,7 @@ Output: true
 
 '''
 
-def isSymmetric(self, root) -> bool:
+def isSymmetric(root) -> bool:
 
     if not root:
         return True
@@ -28,3 +28,6 @@ def isSymmetric(self, root) -> bool:
         )
     
     return isMirror(root.left, root.right)
+
+root = [1,2,2,3,4,4,3]
+print(isSymmetric(root))

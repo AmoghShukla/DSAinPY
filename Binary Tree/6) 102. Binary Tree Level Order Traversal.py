@@ -31,3 +31,7 @@ def levelOrder(self, root):
                 queue.append(node.right)
         result.append(level)
     return result
+
+
+root = [3,9,20,None,None,15,7]
+print(levelOrder(root))

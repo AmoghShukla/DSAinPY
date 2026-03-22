@@ -1,3 +1,17 @@
+'''
+Question : 1886
+Title : Determine Whether Matrix Can Be Obtained By Rotation
+Difficulty : Easy
+
+Given two n x n binary matrices mat and target, return true if it is possible to make mat equal to target by rotating mat in 90-degree increments, or false otherwise.
+Example 1:
+Input: mat = [[0,1],[1,0]], target = [[1,0],[0,1]]
+Output: true
+
+
+'''
+
+
 def findRotation(mat, target) -> bool:
         for _ in range(4):
             if mat == target:

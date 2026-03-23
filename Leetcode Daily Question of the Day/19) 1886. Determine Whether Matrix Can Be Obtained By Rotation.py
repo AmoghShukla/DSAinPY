@@ -22,6 +22,6 @@ def findRotation(mat, target) -> bool:
             mat = [list(reversed(col)) for col in zip(*mat)]
         return False
 
-mat = [[0,1],[1,0]]
+mat = [[0,1],[1,1]]
 target = [[1,0],[0,1]]
 print(findRotation(mat, target))

@@ -8,7 +8,9 @@ Example 1:
 Input: mat = [[0,1],[1,0]], target = [[1,0],[0,1]]
 Output: true
 
-
+Example 2:
+Input: mat = [[0,1],[1,1]], target = [[1,0],[0,1]]
+Output: false
 '''
 
 

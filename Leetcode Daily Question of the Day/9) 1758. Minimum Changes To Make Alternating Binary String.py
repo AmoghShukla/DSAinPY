@@ -12,6 +12,10 @@ Example 1:
 Input: s = "0100"
 Output: 1
 
+Example 2:
+Input: s = "10"
+Output: 0
+
 """
 
 def minOperations(s: str) -> int:

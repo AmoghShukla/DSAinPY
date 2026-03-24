@@ -8,6 +8,10 @@ The string is called alternating if no two adjacent characters are equal.
 For example, the string "010" is alternating, while the string "0100" is not.
 Return the minimum number of operations needed to make s alternating.
 
+Example 1:
+Input: s = "0100"
+Output: 1
+
 """
 
 def minOperations(s: str) -> int:

@@ -35,7 +35,7 @@ def minOperations(s: str) -> int:
         
     return min(counter1, counter2)
 
-s = '1111'
+s = "0100"
 print(minOperations(s))
 
         

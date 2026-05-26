@@ -15,4 +15,15 @@ class SlidingWindow:
 
     @staticmethod
     def longest_substring_without_repeating_characters(s : str) -> int:
-        pass
+        left, maxlen = 0 , 0
+        window = set()
+
+        for right in range(len(s)):
+            while s[right] in window:
+                window.remove(s[left])
+                left += 1
+            window.add(s[right])
+            maxlen = max(maxlen, right-left+1)
+        return maxlen
+    
+print(SlidingWindow.longest_substring_without_repeating_characters("abcabcbb"))
